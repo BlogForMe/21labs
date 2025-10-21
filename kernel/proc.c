@@ -141,8 +141,10 @@ found:
   p->context.ra = (uint64)forkret;
   p->context.sp = p->kstack + PGSIZE;
 
+  p->ticks = 0;
   return p;
 }
+
 
 // free a proc structure and the data hanging from it,
 // including user pages.
